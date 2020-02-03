@@ -20,7 +20,7 @@ def consolidate_cart(cart)
   cart.each do |item|
     new_arr.each do |new_arr_item|
       if new_arr_item[:name] == item[:name]
-        item[:count] += 1
+        new_arr_item[:count] += 1
         has_item = true
       end
     end
