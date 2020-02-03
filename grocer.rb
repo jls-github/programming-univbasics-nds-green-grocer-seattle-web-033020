@@ -38,8 +38,8 @@ def apply_coupons(cart, coupons)
   cart.each do |item|
     coupons.each do |coupon|
       if item[:name] == coupon[:name]
-        
-        items_with_coupon = 
+        items_without_coupon = item[:count] % coupon[:count]
+        items_with_coupon = item[:count] - items_without_coupon
       end
     end
   end
