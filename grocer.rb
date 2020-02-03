@@ -23,8 +23,8 @@ def consolidate_cart(cart)
         new_arr_item[:count] += 1
         has_item = true
       end
-      has_item ? has_item = false : new_arr.push(item) and new_arr[item][:count] = 0 and has_item = false
     end
+    has_item ? has_item = false : new_arr.push(item) and new_arr[item][:count] = 0 and has_item = false
   end
   return new_arr
 end
