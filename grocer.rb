@@ -17,9 +17,9 @@ def consolidate_cart(cart)
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   new_arr = []
   cart.each do |item|
-    new_arr.include?(item) ? new_arr[item]
+    new_arr.include?(item) ? (new_arr.push[item] and new_arr[item][:count] += 1) : new_arr[item][:count] = 1
   end
-    
+  return new_arr
 end
 
 def apply_coupons(cart, coupons)
