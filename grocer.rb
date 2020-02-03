@@ -44,13 +44,14 @@ def apply_coupons(cart, coupons)
         cart.push({
           :item => item[:item] + " W/COUPON",
           :price => coupon[:cost] / coupon[:num],
-          :count => items_with_coupon
+          :count => items_with_coupon,
           :clearance => item[:clearance]
         })
-        items_with_coupon = 0
-        items_without_coupon = 0
       end
     end
+    items_without_coupon ? 0 cart.delete(item) : nil
+    items_with_coupon = 0
+    items_without_coupon = 0
   end
   return cart
 end
