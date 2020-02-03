@@ -17,9 +17,13 @@ def consolidate_cart(cart)
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   new_arr = []
   cart.each do |item|
-    new_arr.each do |item|
-      if cart.each do |item|
-        
+    new_arr.each do |new_arr_item|
+      if new_arr_item[:name] == item[:name]
+        new_arr_item[:count] += 1
+        has_item = true
+      end
+      has_item ? has_item = false : 
+      has_item = false
   end
   return new_arr
 end
