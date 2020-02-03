@@ -42,8 +42,8 @@ def apply_coupons(cart, coupons)
         items_with_coupon = item[:count] - items_without_coupon
         item[:count] = items_without_coupon
         cart.push({
-          :name = item[:name] + "W/COUPON"
-          :price = coupon[:price] / coupon[:count]
+          :name = item[:name] + "W/COUPON",
+          :price = coupon[:price] / coupon[:count],
           :count = items_with_coupon
         })
         items_with_coupon = 0
@@ -51,6 +51,7 @@ def apply_coupons(cart, coupons)
       end
     end
   end
+  return cart
 end
 
 def apply_clearance(cart)
