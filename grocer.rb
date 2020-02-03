@@ -74,4 +74,10 @@ def checkout(cart, coupons)
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
+  
+  total = 0
+  apply_clearance(apply_coupons(consolidate_cart(cart))).each do |item|
+    total += item[:price]
+  end
+  total
 end
