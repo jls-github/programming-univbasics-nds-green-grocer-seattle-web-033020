@@ -49,7 +49,6 @@ def apply_coupons(cart, coupons)
         })
       end
     end
-    #items_without_coupon == 0 and items_with_coupon > 0 ? cart.delete(item) : nil
     items_with_coupon = 0
     items_without_coupon = 0
   end
