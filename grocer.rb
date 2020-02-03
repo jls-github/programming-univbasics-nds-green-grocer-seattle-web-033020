@@ -44,7 +44,7 @@ def apply_coupons(cart, coupons)
         cart.push({
           :item => item[:item] + " W/COUPON",
           :price => coupon[:cost] / coupon[:num],
-          :num => items_with_coupon
+          :count => items_with_coupon
         })
         items_with_coupon = 0
         items_without_coupon = 0
