@@ -48,6 +48,8 @@ def apply_coupons(cart, coupons)
         })
         items_with_coupon = 0
         items_without_coupon = 0
+        if item[:count] = 0
+          cart.remove(item)
       end
     end
   end
